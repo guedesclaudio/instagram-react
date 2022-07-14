@@ -1,5 +1,11 @@
 import ReactDom from 'react-dom'
 
+function Icon (props) {
+    return (
+        <ion-icon name = {props.name}></ion-icon>
+    )
+}
+
 export default function Navbar() {
     return (
         <div class="navbar">
@@ -23,10 +29,10 @@ export default function Navbar() {
                 </div>
         
                 <div class="icones">
-                    <ion-icon name="paper-plane-outline"></ion-icon>
-                    <ion-icon name="compass-outline"></ion-icon>
-                    <ion-icon name="heart-outline"></ion-icon>
-                    <ion-icon name="person-outline"></ion-icon>
+                    <Icon name = "paper-plane-outline"/>
+                    <Icon name = "compass-outline"/>
+                    <Icon name = "heart-outline"/>
+                    <Icon name = "person-outline"/>
                 </div>
 
                 <div class="icones-mobile">
