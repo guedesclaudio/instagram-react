@@ -17,6 +17,11 @@ function Suggestion(props) {
 }
 
 export default function Sidebar () {
+    const suggestionInformation = [{user : "bad.vibes.memes" , src : "./img/bad.vibes.memes.svg"}, 
+                                   {user : "chibirdart" , src : "./img/chibirdart.svg"},
+                                   {user : "razoesparaacreditar" , src : "./img/razoesparaacreditar.svg"},
+                                   {user : "adorable_animals" , src : "./img/adorable_animals.svg"},
+                                   {user : "smallcutecats" , src : "./img/smallcutecats.svg"}]
     return (
         <div class="sidebar">
             <div class="usuario">
@@ -32,11 +37,7 @@ export default function Sidebar () {
                     Sugestões para você
                     <div>Ver tudo</div>
                 </div>
-                <Suggestion src = "./img/bad.vibes.memes.svg" user = "bad.vibes.memes"/>
-                <Suggestion src = "./img/chibirdart.svg" user = "chibirdart"/>
-                <Suggestion src = "./img/razoesparaacreditar.svg" user = "razoesparaacreditar"/>
-                <Suggestion src = "./img/adorable_animals.svg" user = "adorable_animals"/>
-                <Suggestion src = "./img/smallcutecats.svg" user = "smallcutecats"/>
+                {suggestionInformation.map(information => <Suggestion src = {information.src} user = {information.user}/>)}
             </div>
 
             <div class="links">

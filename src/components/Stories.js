@@ -15,16 +15,18 @@ function Story(props) {
 
 
 export default function Stories () {
+    const userStories = [{name : "9gag", img : "/img/9gag.svg"},
+                         {name : "meowed", img : "./img/meowed.svg"},
+                         {name : "barked", img : "./img/barked.svg"},
+                         {name : "nathanwpylestrangeplanet", img : "./img/nathanwpylestrangeplanet.svg"},
+                         {name : "wawawicomics", img : "./img/wawawicomics.svg"},
+                         {name : "respondeai", img : "./img/respondeai.svg"}, 
+                         {name : "filomoderna", img : "./img/filomoderna.svg"},
+                         {name : "memeriagourmet", img : "./img/memeriagourmet.svg"}]
     return (
         <div class="stories">
-            <Story src = "./img/9gag.svg" user = "9gag"/>
-            <Story src = "./img/meowed.svg" user = "meowed"/>
-            <Story src = "./img/barked.svg" user = "barked"/>
-            <Story src = "./img/nathanwpylestrangeplanet.svg" user = "nathanwpylestrangeplanet"/>
-            <Story src = "./img/wawawicomics.svg" user = "wawawicomics"/>
-            <Story src = "./img/respondeai.svg" user = "respondeai"/>
-            <Story src = "./img/filomoderna.svg" user = "filomoderna"/>
-            <Story src = "./img/memeriagourmet.svg" user = "fmemeriagourmet"/>
+            {userStories.map((user) => <Story src = {user.img} user = {user.name}/>)}
+            
             <div class="setinha">
               <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>

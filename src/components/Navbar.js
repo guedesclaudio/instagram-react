@@ -7,6 +7,10 @@ function Icon (props) {
 }
 
 export default function Navbar() {
+    const icons = [{src : "paper-plane-outline"}, 
+                   {src : "compass-outline"},
+                   {src : "heart-outline"},
+                   {src : "person-outline"}]
     return (
         <div class="navbar">
             <div class="container">
@@ -29,10 +33,7 @@ export default function Navbar() {
                 </div>
         
                 <div class="icones">
-                    <Icon name = "paper-plane-outline"/>
-                    <Icon name = "compass-outline"/>
-                    <Icon name = "heart-outline"/>
-                    <Icon name = "person-outline"/>
+                    {icons.map (icon => <Icon name = {icon.src}/>)}
                 </div>
 
                 <div class="icones-mobile">
