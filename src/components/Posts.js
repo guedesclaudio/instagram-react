@@ -1,6 +1,17 @@
 import ReactDom from 'react-dom'
+import React from 'react'
+
 
 function Post(props) {
+
+    const [likeOrDeslike, setLikeOrDeslike] = React.useState("heart-outline")
+    const [colorLike, setColorLike] = React.useState("")
+
+    function like () {
+        likeOrDeslike === "heart-outline" ? setLikeOrDeslike("heart-sharp"):setLikeOrDeslike("heart-outline")
+        colorLike === "" ? setColorLike("danger"):setColorLike("")
+    }
+
     return (
         <div class="post">
             <div class="topo">
@@ -14,14 +25,14 @@ function Post(props) {
             </div>
 
             <div class="conteudo">
-                <img src = {props.srcPhoto}/>
+                <img src = {props.srcPhoto} onClick = {like}/>
             </div>
 
             <div class="fundo">
                 <div class="acoes">
                     <div>
-                        <ion-icon name="heart-outline"></ion-icon>
-                        <ion-icon name="chatbubble-outline"></ion-icon>
+                        <ion-icon name= {likeOrDeslike} color = {colorLike} onClick = {like}></ion-icon>
+                        <ion-icon name="chatbubble-outline" ></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
                     <div>
@@ -41,6 +52,7 @@ function Post(props) {
 }
 
 export default function Posts() {
+
     const postsInformation = [{name : "meowed" , iconImg : "./img/meowed.svg" , postImg : "./img/gato-telefone.svg" ,
                               likeImg : "./img/respondeai.svg" , likeName : "respondeai" , likesNumber : "101.523"},
                               {name : "barked" , iconImg : "./img/barked.svg" , postImg : "./img/dog.svg" ,

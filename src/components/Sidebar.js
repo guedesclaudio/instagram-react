@@ -16,6 +16,18 @@ function Suggestion(props) {
     )
 }
 
+function PrincipalUser (props) {
+    return (
+        <div class="usuario">
+            <img src = {props.src} />
+            <div class="texto">
+                <strong>{props.userName}</strong>
+                {props.surname}
+            </div>
+        </div>
+    )
+}
+
 export default function Sidebar () {
     const suggestionInformation = [{user : "bad.vibes.memes" , src : "./img/bad.vibes.memes.svg"}, 
                                    {user : "chibirdart" , src : "./img/chibirdart.svg"},
@@ -24,13 +36,7 @@ export default function Sidebar () {
                                    {user : "smallcutecats" , src : "./img/smallcutecats.svg"}]
     return (
         <div class="sidebar">
-            <div class="usuario">
-                <img src="./img/catanacomics.svg" />
-                <div class="texto">
-                    <strong>catanacomics</strong>
-                    Catana
-                </div>
-            </div>
+            <PrincipalUser userName = "catanacomics" surname = "Catana" src = "./img/catanacomics.svg"/>
 
             <div class="sugestoes">
                 <div class="titulo">

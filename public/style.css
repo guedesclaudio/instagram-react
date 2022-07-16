@@ -309,6 +309,14 @@
   .logo-mobile, .instagram-mobile {
     display: none !important;
   }
+
+  .like {
+    color: red;
+  }
+
+  .deslike {
+    color: black;
+  }
   
   @media (max-width: 935px) {
     .sidebar {
