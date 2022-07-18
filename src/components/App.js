@@ -1,6 +1,6 @@
 import ReactDom from 'react-dom'
 
-//importar todos os components
+
 import Navbar from './Navbar'
 import Stories from './Stories'
 import Posts from './Posts'

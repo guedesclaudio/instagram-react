@@ -12,6 +12,13 @@ function Post(props) {
         colorLike === "" ? setColorLike("danger"):setColorLike("")
     }
 
+    function likeImg () {
+        if (likeOrDeslike === "heart-outline") {
+            setLikeOrDeslike("heart-sharp")
+            setColorLike("danger")
+        }
+    }
+
     return (
         <div class="post">
             <div class="topo">
@@ -25,7 +32,7 @@ function Post(props) {
             </div>
 
             <div class="conteudo">
-                <img src = {props.srcPhoto} onClick = {like}/>
+                <img src = {props.srcPhoto} onClick = {likeImg}/>
             </div>
 
             <div class="fundo">
