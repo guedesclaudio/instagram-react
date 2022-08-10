@@ -21,7 +21,7 @@
 
 # Preview
 <div align="center">
-  <a href="https://instagram-react-two.vercel.app/"><img src="./img/layout.png" width="400"></a>
+  <a href="https://instagram-react-two.vercel.app/"><img src="./public/img/layout.png" width="400"></a>
   <br>
   <br>
   <p>Clique na imagem para acessar a página</p>
